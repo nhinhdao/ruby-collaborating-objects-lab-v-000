@@ -7,11 +7,12 @@ class MP3Importer
     end
 
     def files
-        binding.pry
+
         @files = Dir.glob("#{path}/*.mp3").collect {|file| file.gsub("#{path}/","")}
     end
 
     def import
+        binding.pry
         files.each {|filename| Song.new_by_filename(filename)}
     end
 end
