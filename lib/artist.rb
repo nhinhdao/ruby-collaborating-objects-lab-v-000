@@ -23,7 +23,6 @@ class Artist
 
     def save
         self.class.all << self
-        self.class.all.uniq
     end
 
     def self.find(name)
