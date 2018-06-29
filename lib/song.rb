@@ -18,6 +18,7 @@ class Song
         # binding.pry
         song = Song.new(filename.split(/\ - /)[1])
         song.artist = Artist.create(filename.split(/\ - /)[0])
+        artist.uniq
         song
     end
 end
