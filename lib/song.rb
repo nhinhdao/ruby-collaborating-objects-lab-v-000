@@ -6,10 +6,6 @@ class Song
         @name = name
     end
 
-    def name=(name)
-        @name = name
-    end
-
     def artist_name= (artist)
         self.artist = Artist.find_or_create_by_name(artist)
         binding.pry
